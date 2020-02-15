@@ -130,7 +130,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">1</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -165,109 +165,6 @@
             
 
   <div class="posts-expand">
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/15/html%205%E5%AE%89%E5%85%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="XIN">
-      <meta itemprop="description" content="总在清晨出走，夜晚温暖地醉酒。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XIN 's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/15/html%205%E5%AE%89%E5%85%A8/" class="post-title-link" itemprop="url">html 5安全</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-15 21:20:28" itemprop="dateCreated datePublished" datetime="2020-02-15T21:20:28+08:00">2020-02-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="html-5安全"><a href="#html-5安全" class="headerlink" title="html 5安全"></a>html 5安全</h1><h2 id="html5新标签"><a href="#html5新标签" class="headerlink" title="html5新标签"></a>html5新标签</h2><h3 id="新标签的XSS"><a href="#新标签的XSS" class="headerlink" title="新标签的XSS"></a>新标签的XSS</h3><p>html 5定义了许多新标签、新事件，可能带来新的xss攻击</p>
-<p>XSS Filter如果建立了黑名单，可能不会覆盖html 5的新标签和功能，从而避免XSS</p>
-<p>为了总结html新标签对XSS产生的改变，产生了HTML5 Security Cheatsheet项目</p>
-<h3 id="iframe的sandbox"><a href="#iframe的sandbox" class="headerlink" title="iframe的sandbox"></a>iframe的sandbox</h3><p>一直在想办法限制iframe执行脚本的权限</p>
-<p>在HTML5中，专门为iframe定义了一个新属性，sandbox。</p>
-<p>使用该属性后，<iframe>标签加载的内容被视为独立的源，脚本无法被执行，表单被禁止提交，插件被禁止下载，指向其他浏览对象的链接也会被禁止。</p>
-<p>sandbox属性能通过参数来提供更准确的控制</p>
-<ul>
-<li>allow-same-origin:允许同源访问</li>
-<li>allow-top-navigation:允许访问顶层窗口</li>
-<li>allow-forms：允许提交表单</li>
-<li>allow-scripts:允许执行脚本</li>
-</ul>
-<p>一个iframe的实例如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">sandbox</span>=<span class="string">"allow-same-origin allow-forms allow-scripts"</span><span class="attr">src</span>=<span class="string">"http://maps.example.com/embedded.html"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Link-types-noreferrer"><a href="#Link-types-noreferrer" class="headerlink" title="Link types:noreferrer"></a>Link types:noreferrer</h3><p><a>标签和<area>标签定义了一个新link types：noreferrer</p>
-<p>标签指定了noreferrer，浏览器在请求该标签指定的地址时不再发送Referer(http请求头信息中的一个常见字段，提供访问来源的信息)</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"xxx"</span> <span class="attr">rel</span>=<span class="string">"noreferer"</span>&gt;</span>test<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>为了保护敏感信息和隐私，防止泄露敏感信息，需要开发者手动添加。</p>
-<h3 id="Canvas的妙用"><a href="#Canvas的妙用" class="headerlink" title="Canvas的妙用"></a>Canvas的妙用</h3><p>让javascript可以在页面中直接操作图片对象，直接操作像素，构造图片区域。</p>
-<p>下面是一个简单的Canvas用例</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"myCanvas"</span> <span class="attr">width</span>=<span class="string">"200"</span> <span class="attr">height</span>=<span class="string">"100"</span> <span class="attr">style</span>=<span class="string">"border:1px solid #c3c3c3;"</span>&gt;</span></span><br><span class="line">your browser does not support the canvas element.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> c=<span class="built_in">document</span>.getElementById(<span class="string">"myCanvas"</span>);</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> cxt=c.getContext(<span class="string">"2d"</span>);</span></span><br><span class="line"><span class="actionscript">cxt.fillStyle=<span class="string">"#FF0000"</span>;</span></span><br><span class="line">cxt.fillRect(0,0,150,75);</span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>在支持Canvas的浏览器上将会显示出一个图片</p>
-<p>Canvas提供强大的功能，甚至可以用来破解验证码，通过js操作Canvas中的每个像素点，成功自动化识别了验证码。</p>
-<h2 id="其他安全问题"><a href="#其他安全问题" class="headerlink" title="其他安全问题"></a>其他安全问题</h2><h3 id="Cross-Origin-Resourse-Sharing"><a href="#Cross-Origin-Resourse-Sharing" class="headerlink" title="Cross -Origin Resourse Sharing"></a>Cross -Origin Resourse Sharing</h3><p>Origin Header 用于标记HTTP发起的源，服务器通过识别浏览器自动带上的这个Origin Header,来判断浏览器的请求是否来自一个合法的源，也可以用于防范CSRF，不易被伪造或清空</p>
-<h3 id="postMessage-跨窗口传递消息"><a href="#postMessage-跨窗口传递消息" class="headerlink" title="postMessage-跨窗口传递消息"></a>postMessage-跨窗口传递消息</h3><p>Windows几乎不受同源策略限制，很多脚本攻击利用了Windows这一特点。</p>
-<p>postMessage允许每一个window（包括当前窗口、弹出窗口、iframes）对象往其他的窗口发送文本消息，从而实现跨窗口消息传递，此功能不受同源策略限制。</p>
-<p>在使用postMessage(),有两个安全问题需要注意：</p>
-<ol>
-<li>必要时可以接收窗口验证Domain,甚至验证url，以防止来自非法页面的消息。实际上是在代码中实现一次同月策略验证的过程。</li>
-<li>在实际应用中，如果将消息写入innerHTML,甚至直接写入script中，可能会导致DOM based XSS的产生。根据”Secure By Default”原则，在接受窗口不应该信任接收到的消息，需要对消息进行安全检查。</li>
-</ol>
-<h3 id="Web-Storage"><a href="#Web-Storage" class="headerlink" title="Web Storage"></a>Web Storage</h3><p>过去在浏览器中能够储存信息的方法有以下几种：</p>
-<ul>
-<li>Cookie(保存登录凭证和少量信息)</li>
-<li>Flash Shared Object</li>
-<li>IE UserData</li>
-</ul>
-<p>Web Storage分为Session Storage和Local Storage</p>
-<p>Session Storage关闭浏览器就会失效，Local Storage会一直存在</p>
-<p>Web Storage也受到同源策略的约束，每个域所拥有的信息只会保存在自己的域下</p>
-<p>攻击者极有可能将恶意代码保存在Web Storage，从而实现跨页面攻击。</p>
-<p>当Web Storage中保存有敏感信息的时候，也可能会成为攻击的目标。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
         
   
   
@@ -407,7 +304,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
