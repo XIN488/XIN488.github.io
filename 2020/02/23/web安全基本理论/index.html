@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="在用户态的最高权限是root 黑客需要能够自己挖掘漏洞，编写exploit 早期，黑客攻击的目标以系统软件居多，能直接获得root权限 基于web的攻击，只能让黑客获得较低权限的账户 客户端软件安全的代表是浏览器攻击 PHP语言只能靠着较好的代码规范来保证没有文件包含漏洞 Web攻击的思路也从服务器端转向了客户端，转向了浏览器和用户 白帽子选择的方法是客服某种攻击方法，而并非抵御单次的攻击 谁能在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2020/02/05/hello-world/index.html">
+<meta property="og:title" content="web安全基本理论">
+<meta property="og:url" content="http://yoursite.com/2020/02/23/web%E5%AE%89%E5%85%A8%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA/index.html">
 <meta property="og:site_name" content="XIN &#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在用户态的最高权限是root 黑客需要能够自己挖掘漏洞，编写exploit 早期，黑客攻击的目标以系统软件居多，能直接获得root权限 基于web的攻击，只能让黑客获得较低权限的账户 客户端软件安全的代表是浏览器攻击 PHP语言只能靠着较好的代码规范来保证没有文件包含漏洞 Web攻击的思路也从服务器端转向了客户端，转向了浏览器和用户 白帽子选择的方法是客服某种攻击方法，而并非抵御单次的攻击 谁能在">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-05T11:18:39.606Z">
-<meta property="article:modified_time" content="2020-02-05T11:18:39.606Z">
+<meta property="article:published_time" content="2020-02-23T14:55:18.213Z">
+<meta property="article:modified_time" content="2020-02-23T14:55:18.494Z">
 <meta property="article:author" content="XIN">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/02/05/hello-world/">
+<link rel="canonical" href="http://yoursite.com/2020/02/23/web%E5%AE%89%E5%85%A8%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA/">
 
 
 <script id="page-configurations">
@@ -44,7 +44,7 @@
   };
 </script>
 
-  <title>Hello World | XIN 's Blog</title>
+  <title>web安全基本理论 | XIN 's Blog</title>
   
 
 
@@ -171,7 +171,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/05/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/23/web%E5%AE%89%E5%85%A8%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -184,7 +184,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          web安全基本理论
         </h1>
 
         <div class="post-meta">
@@ -194,7 +194,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-05 19:18:39" itemprop="dateCreated datePublished" datetime="2020-02-05T19:18:39+08:00">2020-02-05</time>
+              <time title="创建时间：2020-02-23 22:55:18" itemprop="dateCreated datePublished" datetime="2020-02-23T22:55:18+08:00">2020-02-23</time>
             </span>
 
           
@@ -215,19 +215,63 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>在用户态的最高权限是root</p>
+<p>黑客需要能够自己挖掘漏洞，编写exploit</p>
+<p>早期，黑客攻击的目标以系统软件居多，能直接获得root权限</p>
+<p>基于web的攻击，只能让黑客获得较低权限的账户</p>
+<p>客户端软件安全的代表是浏览器攻击</p>
+<p>PHP语言只能靠着较好的代码规范来保证没有文件包含漏洞</p>
+<p>Web攻击的思路也从服务器端转向了客户端，转向了浏览器和用户</p>
+<p>白帽子选择的方法是客服某种攻击方法，而并非抵御单次的攻击</p>
+<p>谁能在技术上领先，谁就能占据主动</p>
+<p>安全问题的本质是信任的问题</p>
+<p>对条件的信任程度，是确定对象是否安全的基础</p>
+<p>把握信任条件的度，使其恰到好处，正是设计安全方案的难点所在</p>
+<p>安全是一个持续的过程，防御技术在不断发展的同时，攻击技术也在不断地发展，两者之间是互相辩证，互相促进的关系</p>
+<p>安全三要素分别是：机密性、完整性和可用性</p>
+<p>机密性要求保护数据内容不能泄露，加密是实现机密性的要求的常见手段</p>
+<p>完整性要求保护数据内容是完整的、没有被篡改的，常见的保证一致性的技术手段是数字签名</p>
+<p>可用性要求保护资源是随需而得</p>
+<p>拒绝服务攻击破坏的是安全的可用性</p>
+<p>资产等级划分，是所有工作的基础，能够帮助关乎我们明确目标是什么，要保护什么</p>
+<p>互联网安全的核心问题，是数据安全的问题</p>
+<p>做资产等级划分需要明确公司最重要的资产是什么，他们最看重的数据是什么的</p>
+<p>完成资产等级划分之后就要划分信任域和信任边界了</p>
+<p>威胁分析，可能造成危害的来源叫威胁，可能会出现的损失叫风险</p>
+<p>威胁分析就是把所有的威胁都找出来，比如说使用模型帮助我们去想哪些方面可能会存在威胁，这就是威胁建模</p>
+<p>威胁可以是：冒充他人身份、修改数据或代码、否认做过的事情、机密信息的泄露、拒绝服务、未经授权许可</p>
+<p>风险分析，影响风险高低的因素除了造成损失的大小，还需要考虑发生的可能性</p>
+<p>DREAD模型和STRIDE模型都起辅助的作用，最终作出决策的还是人</p>
+<p>设计安全方案，要想的是如何通过简单有效的方案解决遇到的安全问题，安全方案能够有效地抵抗威胁，但同时不能过度干涉业务的正常流程，也不能在性能上拖后腿</p>
+<p>一个优秀的安全方案应该是这样：</p>
+<p>能够有效地解决问题</p>
+<p>用户体验好</p>
+<p>高性能</p>
+<p>低耦合</p>
+<p>易于扩展与升级</p>
+<p>设计安全方案的技巧：</p>
+<p>设置黑名单、白名单：在制定防火墙的网络访问控制策略，网站只提供web服务，应只允许某些端口对外提供服务</p>
+<p>在网站的生产环境服务器上，应该限制随意安装软件，需要制定统一的软件版本的规范</p>
+<p>在选择使用白名单时，需要注意避免类似通配符的问题</p>
+<p>最小权限原则要求系统只授予主体必要的权限，而不要过度授权</p>
+<p>纵深防御原则：</p>
+<p>要在各个不同的层面、不同的方面实施安全方案，避免出现疏漏，不同的安全方案之间需要相互配合，构成一个整体；其次，要在正确的地方做正确的事情，在解决根本问题的地方实施针对性的安全方案</p>
+<p>将不同层面设计的安全方案，将共同组成整个防御系统</p>
+<p>纵深防御的第二层含义，理解威胁的本质，做出正确的应对措施</p>
+<p>数据与代码分离原则</p>
+<p>混淆了代码与数据的边界，导致安全问题的发生</p>
+<p>使得攻击的方法无效，也可以算是成功的防御</p>
+<p>不可预测性原则</p>
+<p>采取的做法是让漏洞攻击方法失效，提高攻击门槛</p>
+<p>不可预测性能有效地对抗基于篡改、伪造的攻击</p>
+<p>往往用到加密算法、随机数算法、哈希算法、</p>
+<p>定义一个功能是否是漏洞，只看后果，而不应该看过程</p>
+<p>漏洞只是对破坏性功能的一个统称</p>
+<p>0字节截断</p>
+<p>同源策略，是一种约定，web是构建在同源策略基础上的，浏览器只是针对同源策略的一种实现</p>
+<p>为了不让浏览器的页面发生混乱，浏览器提出了源这一概念，影响源的因素有：域名、子域名、端口、协议，对于当前页面来说，页面内存放的JAVASCRIPT文件的域并不重要，重要的是加载Javascript页面所在的域是什么</p>
+<p>这些带src属性的标签每次加载的，实际上是由浏览器发起了一次GET请求，通过src属性加载的资源，浏览器限制了JAVASCRIPT的权限，使其不能读，写返回的内容</p>
+<p>跨域访问方案的安全基础是信任javascipt无法控制该HTTP头，如果此信任的基础被打破，此方案也不再安全</p>
 
     </div>
 
@@ -268,7 +312,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2020/02/05/hello-world/" title="Hello World">http://yoursite.com/2020/02/05/hello-world/</a>
+    <a href="http://yoursite.com/2020/02/23/web%E5%AE%89%E5%85%A8%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA/" title="web安全基本理论">http://yoursite.com/2020/02/23/web安全基本理论/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -284,10 +328,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/02/23/web%E5%AE%89%E5%85%A8%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA/" rel="next" title="web安全基本理论">
-      web安全基本理论 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/02/05/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/02/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA/" rel="next" title="机器学习理论">
+      机器学习理论 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -348,7 +395,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -491,7 +537,7 @@
       quicklink({
         timeout: 3000,
         priority: true,
-        ignores: [uri => uri.includes('#'),uri => uri == 'http://yoursite.com/2020/02/05/hello-world/',]
+        ignores: [uri => uri.includes('#'),uri => uri == 'http://yoursite.com/2020/02/23/web%E5%AE%89%E5%85%A8%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA/',]
       });
       });
   </script>
