@@ -181,7 +181,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/XIN.jpg">
       <meta itemprop="name" content="XIN">
       <meta itemprop="description" content="总在清晨出走，夜晚温暖地醉酒。">
     </span>
@@ -479,7 +479,7 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="XIN"
-      src="/images/avatar.gif">
+      src="/images/XIN.jpg">
   <p class="site-author-name" itemprop="name">XIN</p>
   <div class="site-description" itemprop="description">总在清晨出走，夜晚温暖地醉酒。</div>
 </div>
@@ -602,6 +602,25 @@
 
 
 
+<script>
+if (document.querySelectorAll('div.pdf').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js', () => {
+    document.querySelectorAll('div.pdf').forEach(element => {
+      PDFObject.embed(element.getAttribute('target'), element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height: element.getAttribute('height') || '500px'
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
 
 
 
